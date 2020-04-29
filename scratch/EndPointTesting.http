@@ -1,0 +1,22 @@
+POST http://localhost:8080/v1/ordermanagement
+content-type: application/json;charset=UTF-8
+
+{
+  "orderNo": "456Order",
+  "customerNumber": 456,
+  "orderLines": [
+    {
+      "lineNumber": 456,
+      "itemId": "123-01",
+      "quantity": 10,
+      "status": "Created"
+    }
+  ],
+  "phoneNumber": "123-456-7890"
+}
+
+###
+
+GET http://localhost:8080/v1/ordermanagement/123Order/Created
+
+###

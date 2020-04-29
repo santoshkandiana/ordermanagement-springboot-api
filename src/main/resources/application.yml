@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://myretail_user:Verizon123@testdb-a33jj.mongodb.net/test?retryWrites=true&w=majority
+      database: order-management
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    health:
+      show-details: always
