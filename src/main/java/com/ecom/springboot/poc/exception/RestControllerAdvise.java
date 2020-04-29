@@ -1,6 +1,6 @@
-package com.lowes.ordermanagement.poc.exception;
+package com.ecom.springboot.poc.exception;
 
-import com.lowes.ordermanagement.poc.model.OrderRetrieveResponse;
+import com.ecom.springboot.poc.model.OrderRetrieveResponse;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -21,7 +21,7 @@ public class RestControllerAdvise {
 
   private OrderRetrieveResponse getErrorResponse(RuntimeException exception, Integer code) {
     return OrderRetrieveResponse.builder()
-                          .source("lowes-ordermanagement-poc")
+                          .source("ecom-springboot-poc")
                           .status(code)
                           .message(exception.getMessage()).build();
   }

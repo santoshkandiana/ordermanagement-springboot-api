@@ -1,11 +1,11 @@
-package com.lowes.ordermanagement.poc.controller;
+package com.ecom.springboot.poc.controller;
 
 
-import com.lowes.ordermanagement.poc.exception.InvalidInputException;
-import com.lowes.ordermanagement.poc.model.OrderRequest;
-import com.lowes.ordermanagement.poc.model.OrderRetrieveResponse;
-import com.lowes.ordermanagement.poc.model.OrderSaveResonse;
-import com.lowes.ordermanagement.poc.service.OrderManagementService;
+import com.ecom.springboot.poc.exception.InvalidInputException;
+import com.ecom.springboot.poc.model.OrderRetrieveResponse;
+import com.ecom.springboot.poc.model.OrderRequest;
+import com.ecom.springboot.poc.model.OrderSaveResonse;
+import com.ecom.springboot.poc.service.OrderManagementService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -46,7 +46,7 @@ public class OrderManagementController {
                 .order(orderManagementService.saveOrder(orderRequest))
                 .message("Order created successfully")
                 .status(200)
-                .source("lowes-ordermanagement-poc").build();
+                .source("ecom-springboot-poc").build();
 
     }
 
@@ -72,7 +72,7 @@ public class OrderManagementController {
                     .orders(orderManagementService.retrieveOrderByStatus(orderNumber, orderStatus))
                     .message("Order retrieved successfully")
                     .status(200)
-                    .source("lowes-ordermanagement-poc").build();
+                    .source("ecom-springboot-poc").build();
         }
         throw new InvalidInputException("Order Number or Order Status cannot be empty");
     }

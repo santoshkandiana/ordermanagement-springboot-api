@@ -1,4 +1,4 @@
-package com.lowes.ordermanagement.poc.model;
+package com.ecom.springboot.poc.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

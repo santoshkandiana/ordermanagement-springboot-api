@@ -1,4 +1,4 @@
-package com.lowes.ordermanagement.poc.exception;
+package com.ecom.springboot.poc.exception;
 
 public class InvalidInputException extends RuntimeException {
     public InvalidInputException() {

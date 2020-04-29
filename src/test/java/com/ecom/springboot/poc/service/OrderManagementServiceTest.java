@@ -1,8 +1,8 @@
-package com.lowes.ordermanagement.poc.service;
+package com.ecom.springboot.poc.service;
 
-import com.lowes.ordermanagement.poc.model.Order;
-import com.lowes.ordermanagement.poc.model.OrderLine;
-import com.lowes.ordermanagement.poc.repository.OrderManagementRepository;
+import com.ecom.springboot.poc.model.Order;
+import com.ecom.springboot.poc.model.OrderLine;
+import com.ecom.springboot.poc.repository.OrderManagementRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;

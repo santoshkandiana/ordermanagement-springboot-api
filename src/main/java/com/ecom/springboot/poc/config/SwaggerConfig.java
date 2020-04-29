@@ -1,4 +1,4 @@
-package com.lowes.ordermanagement.poc.config;
+package com.ecom.springboot.poc.config;
 
 import com.google.common.base.Predicate;
 import org.springframework.context.annotation.Bean;
@@ -34,7 +34,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         @SuppressWarnings("deprecation")
-        ApiInfo apiInfo = new ApiInfo("lowes-ordermanagement-poc",
+        ApiInfo apiInfo = new ApiInfo("ecom-springboot-poc",
                 "This API deals with order management",
                 "V1", "Terms of service", "na", "Copyright",
                 "API license URL");

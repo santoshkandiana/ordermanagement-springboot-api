@@ -1,12 +1,12 @@
-package com.lowes.ordermanagement.poc.controller;
+package com.ecom.springboot.poc.controller;
 
+import com.ecom.springboot.poc.exception.RestControllerAdvise;
+import com.ecom.springboot.poc.model.Order;
+import com.ecom.springboot.poc.model.OrderLine;
+import com.ecom.springboot.poc.model.OrderRequest;
+import com.ecom.springboot.poc.model.OrderRetrieveResponse;
+import com.ecom.springboot.poc.service.OrderManagementService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lowes.ordermanagement.poc.exception.RestControllerAdvise;
-import com.lowes.ordermanagement.poc.model.Order;
-import com.lowes.ordermanagement.poc.model.OrderLine;
-import com.lowes.ordermanagement.poc.model.OrderRequest;
-import com.lowes.ordermanagement.poc.model.OrderRetrieveResponse;
-import com.lowes.ordermanagement.poc.service.OrderManagementService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -69,7 +69,7 @@ public class OrderManagementControllerTest {
                 .orders(Collections.singletonList(order))
                 .status(200)
                 .message("Order retrieved successfully")
-                .source("lowes-ordermanagement-poc")
+                .source("ecom-springboot-poc")
                 .build();
 
 

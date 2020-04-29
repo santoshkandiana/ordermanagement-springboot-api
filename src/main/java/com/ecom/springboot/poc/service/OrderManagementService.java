@@ -1,8 +1,8 @@
-package com.lowes.ordermanagement.poc.service;
+package com.ecom.springboot.poc.service;
 
-import com.lowes.ordermanagement.poc.model.Order;
-import com.lowes.ordermanagement.poc.model.OrderRequest;
-import com.lowes.ordermanagement.poc.repository.OrderManagementRepository;
+import com.ecom.springboot.poc.model.Order;
+import com.ecom.springboot.poc.model.OrderRequest;
+import com.ecom.springboot.poc.repository.OrderManagementRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

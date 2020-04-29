@@ -1,4 +1,4 @@
-package com.lowes.ordermanagement.poc.model;
+package com.ecom.springboot.poc.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package com.lowes.ordermanagement.poc.repository;
+package com.ecom.springboot.poc.repository;
 
-import com.lowes.ordermanagement.poc.model.Order;
+import com.ecom.springboot.poc.model.Order;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
