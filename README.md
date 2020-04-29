@@ -12,7 +12,7 @@ GET
 
 
 
-##GitHub URL https://github.com/santoshkandiana/lowes-ordermanagement-poc
+##GitHub URL https://github.com/santoshkandiana/springboot-poc
 
 Notes to reviewer
 Used TDD for building the application. Used lombok framework for builders and models. used gradle instead of maven as i have been using gradle for while Used Mongo Data JPA framework to talk to mongo database
