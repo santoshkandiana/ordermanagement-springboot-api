@@ -35,7 +35,7 @@ public class OrderManagementServiceTest {
     expectedOrders = Collections.singletonList(Order.builder()
             .id("111l")
             .customerNumber(123)
-            .PhoneNumber("123-456-7890")
+            .phoneNumber("123-456-7890")
             .orderLines(Collections.singletonList(OrderLine.builder()
                     .quantity(1)
                     .itemId("123ItemId")

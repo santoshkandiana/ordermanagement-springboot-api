@@ -14,7 +14,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
-import java.util.Arrays;
+import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
@@ -55,8 +55,8 @@ public class OrderManagementControllerTest {
         Order order = Order.builder()
                 .id("123OrderId")
                 .customerNumber(123)
-                .PhoneNumber("123-456-7890")
-                .orderLines(Arrays.asList(OrderLine.builder()
+                .phoneNumber("123-456-7890")
+                .orderLines(Collections.singletonList(OrderLine.builder()
                         .quantity(1)
                         .itemId("123ItemId")
                         .lineNumber(456)
@@ -65,15 +65,15 @@ public class OrderManagementControllerTest {
                 .build();
 
 
-        OrderRetrieveResponse expectedProductGetResponse = OrderRetrieveResponse.builder()
-                .orders(Arrays.asList(order))
+        OrderRetrieveResponse expectedorderGetResponse = OrderRetrieveResponse.builder()
+                .orders(Collections.singletonList(order))
                 .status(200)
                 .message("Order retrieved successfully")
                 .source("lowes-ordermanagement-poc")
                 .build();
 
 
-        when(orderManagementService.retrieveOrderByStatus(any(),any())).thenReturn(Arrays.asList(order));
+        when(orderManagementService.retrieveOrderByStatus(any(),any())).thenReturn(Collections.singletonList(order));
 
         //Act
         MvcResult mvcResult = mockMvc.perform(
@@ -83,7 +83,7 @@ public class OrderManagementControllerTest {
 
         OrderRetrieveResponse actualResponse = objectMapper.readValue(mvcResult.getResponse().getContentAsString(), OrderRetrieveResponse.class);
         //Assert
-        assertEquals(expectedProductGetResponse.toString(), actualResponse.toString());
+        assertEquals(expectedorderGetResponse.toString(), actualResponse.toString());
         verify(orderManagementService, times(1)).retrieveOrderByStatus(any(),any());
 
     }
@@ -95,8 +95,8 @@ public class OrderManagementControllerTest {
         OrderRequest order = OrderRequest.builder()
                 .orderNo("123OrderId")
                 .customerNumber(123)
-                .PhoneNumber("123-456-7890")
-                .orderLines(Arrays.asList(OrderLine.builder()
+                .phoneNumber("123-456-7890")
+                .orderLines(Collections.singletonList(OrderLine.builder()
                         .quantity(1)
                         .itemId("123ItemId")
                         .lineNumber(456)
@@ -108,8 +108,8 @@ public class OrderManagementControllerTest {
         Order orderResponse = Order.builder()
                 .id("123OrderId")
                 .customerNumber(123)
-                .PhoneNumber("123-456-7890")
-                .orderLines(Arrays.asList(OrderLine.builder()
+                .phoneNumber("123-456-7890")
+                .orderLines(Collections.singletonList(OrderLine.builder()
                         .quantity(1)
                         .itemId("123ItemId")
                         .lineNumber(456)

@@ -1,6 +1,5 @@
 package com.lowes.ordermanagement.poc.service;
 
-import com.lowes.ordermanagement.poc.controller.OrderManagementController;
 import com.lowes.ordermanagement.poc.model.Order;
 import com.lowes.ordermanagement.poc.model.OrderRequest;
 import com.lowes.ordermanagement.poc.repository.OrderManagementRepository;
@@ -29,7 +28,7 @@ public class OrderManagementService {
         Order order =  Order.builder()
                          .orderNo(orderRequest.getOrderNo())
                          .customerNumber(orderRequest.getCustomerNumber())
-                         .PhoneNumber(orderRequest.getPhoneNumber())
+                         .phoneNumber(orderRequest.getPhoneNumber())
                          .orderLines(orderRequest.getOrderLines()).build();
 
         return orderManagementRepository.save(order);

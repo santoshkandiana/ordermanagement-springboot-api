@@ -19,6 +19,6 @@ public class Order {
     private String id;
     private String orderNo;
     private Integer customerNumber;
-    private String PhoneNumber;
+    private String phoneNumber;
     private List<OrderLine> orderLines;
 }

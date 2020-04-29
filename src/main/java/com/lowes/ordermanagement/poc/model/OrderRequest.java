@@ -15,7 +15,7 @@ public class OrderRequest {
 
     private String orderNo;
     private Integer customerNumber;
-    private String PhoneNumber;
+    private String phoneNumber;
     private List<OrderLine> orderLines;
 
 }

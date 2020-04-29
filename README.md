@@ -1,4 +1,4 @@
-#My Retail ####Service Name: myretail-products-api
+#Order Management ####Service Name: ordermanagement-springboot-api
 
 GET Order Details
 Description
